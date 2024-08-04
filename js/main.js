@@ -1,24 +1,46 @@
-import '../css/style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+document.addEventListener("DOMContentLoaded", function () {
+  var downloadBtn = document.getElementById("downloadBtn");
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  downloadBtn.addEventListener("click", function () {
+    var element = document.querySelector(".container");
+    var options = {
+      margin: 1,
+      filename: "resume.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    };
 
-setupCounter(document.querySelector('#counter'))
+    html2pdf().from(element).set(options).save();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Список классов, к элементам с которыми нужно добавить эффект
+  var classesToRipple = ["box"];
+
+  classesToRipple.forEach(function (className) {
+    var elements = document.querySelectorAll("." + className);
+    elements.forEach(function (element) {
+      element.classList.add("material-ripple");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Восстановление данных из localStorage
+  var editableElements = document.querySelectorAll("[contenteditable]");
+  editableElements.forEach(function (el) {
+    var savedContent = localStorage.getItem(el.id);
+    if (savedContent) {
+      el.innerHTML = savedContent;
+    }
+  });
+
+  // Сохранение данных в localStorage
+  editableElements.forEach(function (el) {
+    el.addEventListener("input", function () {
+      localStorage.setItem(el.id, el.innerHTML);
+    });
+  });
+});

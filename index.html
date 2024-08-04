@@ -5,9 +5,228 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+    <div class="container">
+      <div class="section" id="top-section">
+        <div id="photo">
+          <img
+            src="красивый-удивленный-мужчина-на-фиолетовом-поле-для-текста-фоне-288273055.webp"
+            alt="Фото"
+            id="photo-img"
+          />
+        </div>
+        <div class="box" id="name-title">
+          <h3>Hi all!</h3>
+          <h1 id="name" contenteditable="true">Anton</h1>
+          <p id="title" contenteditable="true">Developer</p>
+        </div>
+        <div class="box" id="languages">
+          <h2>Languages</h2>
+          <ul>
+            <li>
+              English:
+              <div class="level">
+                <div class="fill" style="width: 80%"></div>
+              </div>
+            </li>
+            <li>
+              Russian:
+              <div class="level">
+                <div class="fill" style="width: 90%"></div>
+              </div>
+            </li>
+            <li>
+              Spanish:
+              <div class="level">
+                <div class="fill" style="width: 60%"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box" id="communicate">
+          <h2>I`m ready to work</h2>
+          <p id="contacts" contenteditable="true">
+            tbankresum@gmail.com | <br />
+            test@gmail.com
+          </p>
+        </div>
+        <div class="box" id="info">
+          <h2>Briefly about me</h2>
+          <p id="about" contenteditable="true">
+            I am 19 years old. I live in Russia. I have been doing IT for a
+            short time.
+          </p>
+        </div>
+      </div>
+      <div class="section" id="middle-section">
+        <div class="box" id="experience">
+          <h2>Experience</h2>
+          <div class="exp" id="first-exp">
+            <div>
+              <p class="exp-time" id="exp-time" contenteditable="true">
+                Jun. 2023 - Present
+              </p>
+              <p class="exp-title" id="exp-title" contenteditable="true">
+                Marketing Manager
+              </p>
+              <p class="exp-place" id="exp-place" contenteditable="true">
+                Parkoyan | Full-time
+              </p>
+            </div>
+            <div class="secondpart">
+              <p class="exp-desc" id="exp-desc-first" contenteditable="true">
+                Strategy development and planning of campaigns that promote the
+                business and generate revenue for the company.
+              </p>
+              <p class="exp-desc" id="exp-desc-second" contenteditable="true">
+                SMM Content Creation for blogs, websites, social media.
+              </p>
+            </div>
+          </div>
+          <div class="exp">
+            <div>
+              <p class="exp-time" id="exp-time-second" contenteditable="true">
+                2017 - Present
+              </p>
+              <p class="exp-title" id="exp-title-second" contenteditable="true">
+                Graphic / Web Designer
+              </p>
+              <p class="exp-place" id="exp-place-second" contenteditable="true">
+                Freelance
+              </p>
+            </div>
+            <div class="secondpart">
+              <p class="exp-desc" id="exp-desc-third" contenteditable="true">
+                Development of internal projects from scratch; product design of
+                brands.
+              </p>
+              <p class="exp-desc" id="exp-desc-fourth" contenteditable="true">
+                Landing pages, webshops and hybrid apps.
+              </p>
+              <p class="exp-desc" id="exp-desc-fiveth" contenteditable="true">
+                Coordinating with outsourced clients, art services, web
+                developer, marketing partners, and colleagues as necessary.
+              </p>
+            </div>
+          </div>
+          <div class="exp">
+            <div>
+              <p class="exp-time" id="exp-time-third" contenteditable="true">
+                Sep. 2021 - Jun. 2023
+              </p>
+              <p class="exp-title" id="exp-title-third" contenteditable="true">
+                Legal Assistant
+              </p>
+              <p class="exp-place" id="exp-place-third" contenteditable="true">
+                Law Firm | Intern
+              </p>
+            </div>
+            <div class="secondpart">
+              <p class="exp-desc" id="exp-desc-sixth" contenteditable="true">
+                Provide administrative support to lawyer and enhance office
+                effectiveness.
+              </p>
+              <p class="exp-desc" id="exp-desc-seven" contenteditable="true">
+                Handle communication with clients, witnesses etc.
+              </p>
+              <p class="exp-desc" id="exp-desc-eigth" contenteditable="true">
+                Witnessing execution of documents, prepare and file court
+                documents, interrogatories and testimony.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" id="tools">
+          <h2>Tools</h2>
+          <p>List of tools used in development</p>
+          <img src="icons-rom.png" alt="Icons" id="img-icons" />
+        </div>
+      </div>
+      <div class="section" id="bottom-section">
+        <div class="box" id="education">
+          <h2>Education</h2>
+          <div class="type-education">
+            <p
+              class="year-education"
+              id="year-education-first"
+              contenteditable="true"
+            >
+              2017-2022
+            </p>
+            <p
+              class="text-company"
+              id="text-company-first"
+              contenteditable="true"
+            >
+              Graphic Design. created visually compelling designs
+            </p>
+            <p id="name-company-first" contenteditable="true">GeekBrains</p>
+          </div>
+          <div class="type-education">
+            <p
+              class="year-education"
+              contenteditable="true"
+              id="year-education-second"
+            >
+              2023
+            </p>
+            <p
+              class="text-company"
+              contenteditable="true"
+              id="text-company-second"
+            >
+              Backend. Developed server-side
+            </p>
+            <p id="name-company-second" contenteditable="true">
+              Result Univercity
+            </p>
+          </div>
+          <div class="type-education">
+            <p
+              class="year-education"
+              id="year-education-third"
+              contenteditable="true"
+            >
+              2023
+            </p>
+            <p
+              class="text-company"
+              id="text-company-third"
+              contenteditable="true"
+            >
+              UI/UX. Conducted user research and usability testing
+            </p>
+            <p id="name-company-third" contenteditable="true">TBank</p>
+          </div>
+        </div>
+
+        <div class="box" id="interests">
+          <h2>Interests</h2>
+          <div id="interestList">
+            <p>Branding</p>
+            <p>Design</p>
+            <p>Photography</p>
+            <p>Programming</p>
+            <p>Travelling</p>
+            <p>Create music</p>
+            <p>Writing code</p>
+            <p>Game development</p>
+            <p>Tech blogging</p>
+            <p>Cybersecurity</p>
+            <p>IoT</p>
+            <p>Machine learning</p>
+            <p>Robotics</p>
+            <p>Automation</p>
+          </div>
+        </div>
+      </div>
+      <button id="downloadBtn">Download PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </body>
 </html>
